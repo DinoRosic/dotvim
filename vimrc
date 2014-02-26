@@ -3,7 +3,8 @@
 
 set nocompatible                  " Must come first because it changes other options.
 
-silent! call pathogen#runtime_append_all_bundles()
+silen! call pathogetn#runtime_append_all_bundles()
+execute pathogen#infect()
 
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
@@ -66,6 +67,9 @@ map <leader>tm :tabmove
 " Uncomment to use Jamis Buck's file opening plugin
 map <Leader>t :FuzzyFinderTextMate<Enter>
 
+" Open/close nerd tree with ctr+n
+map <C-n> :NERDTreeToggle<CR>
+
 " Controversial...swap colon and semicolon for easier commands
 "nnoremap ; :
 "nnoremap : ;
@@ -79,5 +83,3 @@ map <Leader>t :FuzzyFinderTextMate<Enter>
 
 " For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
-
-
