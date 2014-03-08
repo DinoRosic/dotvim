@@ -3,6 +3,23 @@
 
 set nocompatible                  " Must come first because it changes other options.
 
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" alternatively, pass a path where Vundle should install bundles
+"let path = '~/some/path/here'
+"call vundle#rc(path)
+
+" let Vundle manage Vundle, required
+Bundle 'gmarik/vundle'
+Bundle 'skalnik/vim-vroom'
+Bundle 'ervandew/supertab'
+Bundle 'bronson/vim-trailing-whitespace'
+Bundle 'mileszs/ack.vim'
+
 silen! call pathogetn#runtime_append_all_bundles()
 execute pathogen#infect()
 
@@ -78,8 +95,10 @@ map <C-n> :NERDTreeToggle<CR>
 "vnoremap : ;
 
 " Automatic fold settings for specific files. Uncomment to use.
-" autocmd FileType ruby setlocal foldmethod=syntax
-" autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+"autocmd FileType ruby setlocal foldmethod=syntax
+"autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+"Config ack
+let g:ackprg="ack -H"
 
 " For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
