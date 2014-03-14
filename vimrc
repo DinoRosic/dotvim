@@ -87,6 +87,7 @@ map <Leader>t :FuzzyFinderTextMate<Enter>
 " Open/close nerd tree with ctr+n
 map <C-n> :NERDTreeToggle<CR>
 
+map <Leader>i mmgg=G`m<CR>
 " Controversial...swap colon and semicolon for easier commands
 "nnoremap ; :
 "nnoremap : ;
