@@ -1,9 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/Dino/.vim'
-let g:netrw_dirhist_2='/Users/Dino/Desktop/peepcode-vim-code/tutorial-apache-files'
-let g:netrw_dirhist_3='/Users/Dino/Desktop/peepcode-vim-code'
-let g:netrw_dirhist_4='/Users/Dino/Desktop'
-let g:netrw_dirhist_5='/Users/Dino/Desktop/peepcode-vim-code/tutorial-apache-files'
-let g:netrw_dirhist_6='/Users/Dino/Desktop'
-let g:netrw_dirhist_7='/Users/Dino/Desktop/peepcode-vim-code/tutorial-apache-files'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/drosic/Code/zendesk/zendesk/config'
+let g:netrw_dirhist_2='/Users/drosic/Code/ReduxSimpleStarter'
+let g:netrw_dirhist_3='/Users/drosic/Code/zendesk/zendesk_browser_tests/lib/tasks/voice/scout'
+let g:netrw_dirhist_4='/Users/drosic/Code/robide'
+let g:netrw_dirhist_5='/Users/drosic/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/zendesk_api-1.14.4'

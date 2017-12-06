@@ -7,8 +7,8 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 " alternatively, pass a path where Vundle should install bundles
 "let path = '~/some/path/here'
 "call vundle#rc(path)
@@ -19,9 +19,23 @@ Bundle 'skalnik/vim-vroom'
 Bundle 'ervandew/supertab'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'mileszs/ack.vim'
+Bundle 'fatih/vim-go'
+" Every one should have a pair (Autogenerate pairs for "{[( )
+Bundle 'jiangmiao/auto-pairs'
+" Snippets for our use :)
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+" Git tools
+Bundle 'tpope/vim-fugitive'
 
 silen! call pathogetn#runtime_append_all_bundles()
 execute pathogen#infect()
+" CTRL-P plugin
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " Ignore file for ctrl-p
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$' " Ignore version control for ctrl-p
 
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
@@ -100,6 +114,9 @@ map <Leader>i mmgg=G`m<CR>
 "autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
 "Config ack
 let g:ackprg="ack -H"
+
+
+execute pathogen#infect()
 
 " For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
